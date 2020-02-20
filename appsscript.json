@@ -1,0 +1,38 @@
+{
+  "timeZone": "Europe/Berlin",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/calendar.addons.execute"
+  ],
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Notion",
+      "logoUrl": "https://www.notion.so/images/logo-ios.png",
+      "layoutProperties": {
+        "primaryColor": "#424242"
+      },
+      "useLocaleFromApp": false,
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "universalActions": [
+        {
+          "label": "Open Notion",
+          "openLink": "https://notion.so"
+        }
+      ],
+      "openLinkUrlPrefixes": ["*"]
+    },
+    "gmail": {
+      "contextualTriggers": []
+    },
+    "calendar": {},
+    "drive": {}
+  },
+  "urlFetchWhitelist": ["https://www.notion.so/api/v3/"]
+}
